@@ -39,9 +39,10 @@ app.register(getSubscriberInvitesCountRoute)
 app.register(getSubscriberRankingPositionRoute)
 app.register(getRankingRoute)
 
+const baseUrl = process.env.RENDER_EXTERNAL_URL || `http://localhost:${env.PORT}`
 app.listen({ port: env.PORT }).then(() => {
     console.log("HTTP Server Running!")
-    console.log(`DOCS -> http://localhost:${env.PORT}/docs`)
+    console.log(`DOCS -> ${baseUrl}/docs`)
     console.log(`POSTGRESQL -> ${env.POSTGRES_URL}`)
     console.log(`REDIS -> ${env.REDIS_URL}`)
 })
