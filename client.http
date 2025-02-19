@@ -1,10 +1,24 @@
+### CREATE SUBSCRIPTION
 POST http://localhost:3334/subscriptions
 Content-Type: application/json
 
 {
-    "name": "Bruno Henrique",
-    "email": "bruno@teste.com"
+    "name": "Desconhecido 1",
+    "email": "desconhecido1@teste.com",
+    "referrer": "d57f870b-469f-4a6b-8489-51853d4a1d7a"
 }
 
-###
-GET http://localhost:3334/invites/bf95661c-2af5-4e0b-8cad-21a751cc501d
+### GET INVITE
+GET http://localhost:3334/invites/d57f870b-469f-4a6b-8489-51853d4a1d7a
+
+### GET CLICKS
+GET http://localhost:3334/subscribers/d57f870b-469f-4a6b-8489-51853d4a1d7a/ranking/clicks
+
+### GET COUNT
+GET http://localhost:3334/subscribers/d57f870b-469f-4a6b-8489-51853d4a1d7a/ranking/count
+
+### GET POSITION
+GET http://localhost:3334/subscribers/d57f870b-469f-4a6b-8489-51853d4a1d7a/ranking/position
+
+### GET RANKING
+GET http://localhost:3334/ranking
