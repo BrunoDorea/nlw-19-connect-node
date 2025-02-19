@@ -1,0 +1,10 @@
+POST http://localhost:3334/subscriptions
+Content-Type: application/json
+
+{
+    "name": "Bruno Henrique",
+    "email": "bruno@teste.com"
+}
+
+###
+GET http://localhost:3334/invites/bf95661c-2af5-4e0b-8cad-21a751cc501d
